@@ -1,0 +1,11 @@
+Title: Modern web applications - 2012 
+
+Description:
+Modern web apps are rich, interactive applications. This webcast will cover new techniques for building modern web apps and how to utilize the latest HTML5 APIs to create a new class of web apps that will delight and amaze your users. We will discusses the latest and greatest application patterns and toolset (including some cool tips on Chrome DevTools) for building cutting edge HTML5 applications. 
+
+===
+* Start with modern web app
+* Yo.man
+* Backbone/angular ?
+* DevTools tips/tricks
+===
