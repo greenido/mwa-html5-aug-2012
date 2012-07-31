@@ -113,8 +113,9 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
               <li class="to-build">Self Contained & Functional</li>
               <li class="to-build">"Offline First"</li>
               <li class="to-build">Client Side Architecture</li>
-              <li class="to-build">Device Aware / 60fps</li>
-              
+              <li class="to-build">Device Aware</li>
+              <li class="to-build">60fps</li>
+
             </ul>
             <img src="images/gr8-web-apps.png" alt="examples for great web apps that leverage html5 apis" />
           </div>
@@ -130,7 +131,7 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
               <li><a href="http://documentcloud.github.com/backbone/">
                 Backbone.js</a> - Gives structure to web applications by 
                 providing models with binding, collections and views</li>
-                
+
                 <li><a href="http://emberjs.com/">Ember.js</a> - Don't waste time making trivial choices
                 </li> 
               </ul>
@@ -143,7 +144,7 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
               <a href="http://bit.ly/gce-web">Google Cloud End Points</a>
             </p>
           </slide>
-          
+
           <slide>
             <h2>Offline - Why?</h2>
             <div class="low-list flexbox hcenter">
@@ -174,9 +175,9 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
                 <pre>navigator.onLine & window.(ononline|onoffline)</pre>
               </li>
             </ul>
-            
+
             <img src="images/offline-road2.png" alt="offline on the road" />
-            
+
           </div>
         </slide>
 
@@ -264,23 +265,23 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
           </hgroup>
           <article class="flexbox-example" id="flexbox-ex2">
             <pre class="prettyprint" data-lang="css">
-              .box {
-              display: <a data-tooltip-property="flex" class="bold"></a>;
-              <a data-tooltip-property="justify-content" class="bold"></a>: <select id="justify-content">
-              <option>flex-start</option>
-              <option selected>center</option>
-              <option>flex-end</option>
-              <option>space-between</option>
-              <option>space-around</option>
-            </select>;
-            <a data-tooltip-property="align-items" class="bold"></a>: <select id="align-items">
-            <option>flex-start</option>
-            <option selected>center</option>
-            <option>flex-end</option>
-            <option>baseline</option>
-            <option>stretch</option>
-          </select>;
-        }
+.box {
+  display: <a data-tooltip-property="flex" class="bold"></a>;
+  <a data-tooltip-property="justify-content" class="bold"></a>: <select id="justify-content">
+  <option>flex-start</option>
+  <option selected>center</option>
+  <option>flex-end</option>
+  <option>space-between</option>
+  <option>space-around</option>
+</select>;
+  <a data-tooltip-property="align-items" class="bold"></a>: <select id="align-items">
+<option>flex-start</option>
+<option selected>center</option>
+<option>flex-end</option>
+<option>baseline</option>
+<option>stretch</option>
+</select>;
+}
       </pre>
       <section class="box">
         <div>A</div>
@@ -301,17 +302,17 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
         <li>Items with the same order group are laid out per source document.</li>
       </ul>
       <pre class="prettyprint" data-lang="css">
-        .box {
-        <a data-tooltip-property="flex-direction" class="bold"></a>: <select id="flexDirection">
+.box {
+  <a data-tooltip-property="flex-direction" class="bold"></a>: <select id="flexDirection">
         <option selected>row</option>
         <option>row-reverse</option>
         <option>column</option>
         <option>column-reverse</option>
       </select>;
-    }
-    .box > :nth-child(2) {
-    <a data-tooltip-property="order" class="bold"></a>: <input id="order" type="number" placeholder="0">;
-  }
+}
+box > :nth-child(2) {
+  <a data-tooltip-property="order" class="bold"></a>: <input id="order" type="number" placeholder="0">;
+}
 </pre>
 <section class="box">
   <div>A</div>
@@ -361,12 +362,12 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
       <li>3rd argument is preferred size</li>
     </ul>
     <pre class="prettyprint" data-lang="css">
-      .box > * {
-      <a data-tooltip-property="flex" class="bold"></a>: 1 0 0px;
-    }
-    .box > :nth-child(2) {
-    <a data-tooltip-property="flex" class="bold"></a>: <input type="number" value="1" placeholder="1"> <input type="number" placeholder="0"> <input type="text" placeholder="0">px;
-  }
+.box > * {
+  <a data-tooltip-property="flex" class="bold"></a>: 1 0 0px;
+}
+box > :nth-child(2) {
+  <a data-tooltip-property="flex" class="bold"></a>: <input type="number" value="1" placeholder="1"> <input type="number" placeholder="0"> <input type="text" placeholder="0">px;
+}
 </pre>
 <section class="box">
   <div>A</div>
@@ -427,17 +428,17 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   <article class="smaller">
     <p>calc()</p>
     <pre class="prettyprint" data-lang="css">
-      width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px - 100);
-      width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(2 * 50%);
-      width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px / 2);
-      color: hsl(<a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(120), <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(75%), 0.5);
-      background-position: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(50% + 5px) center;
+width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px - 100);
+width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(2 * 50%);
+width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px / 2);
+color: hsl(<a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(120), <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(75%), 0.5);
+background-position: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(50% + 5px) center;
     </pre>
     <p>min()</p>
     <pre class="prettyprint" data-lang="css">
-      width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(150px, 100px, 200px);
-      width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(90px + 50px, 100px);
-      width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100px, 100%);  /* where 100% is 200px; */
+width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(150px, 100px, 200px);
+width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(90px + 50px, 100px);
+width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100px, 100%);  /* where 100% is 200px; */
     </pre>
     <p>max()</p>
     <pre class="prettyprint" data-lang="css">
@@ -463,19 +464,19 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   </hgroup>
   <article id="flexbox-circle" class="columns-2">
     <pre class="prettyprint" data-lang="css">
-      .circle {
-      width: 300px;
-      height: 300px;
-    }
-    div {
-    display: <a data-tooltip-property="flex" class="bold"></a>;
-    width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100% - 4em);
-    height: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100% - 4em);
-    border-radius: 50%;
-    <a data-tooltip-property="align-items" data-tooltip-support='["webkit"]' class="bold"></a>: center;
-    <a data-tooltip-property="justify-content" data-tooltip-support='["webkit"]' class="bold"></a>: center;
-  }
-  div:hover {
+.circle {
+  width: 300px;
+  height: 300px;
+}
+div {
+  display: <a data-tooltip-property="flex" class="bold"></a>;
+  width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100% - 4em);
+  height: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100% - 4em);
+  border-radius: 50%;
+  <a data-tooltip-property="align-items" data-tooltip-support='["webkit"]' class="bold"></a>: center;
+  <a data-tooltip-property="justify-content" data-tooltip-support='["webkit"]' class="bold"></a>: center;
+}
+div:hover {
   border-radius: 0;
 }
 </pre>
@@ -572,10 +573,10 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
     <div>
       <p>Angular ( <a href="http://angularjs.org">angularjs.org</a> ) example:</p>
       <pre class="prettyprint" data-lang="html">
-        &lt;div <b>ng-app</b> ng-init="val=25">
-        Volume: &lt;input type="range" min="0" max="100" <b>ng-model="val"</b>>
-        <b>{{val}}</b>/100
-        &lt;/div>
+&lt;div <b>ng-app</b> ng-init="val=25">
+  Volume: &lt;input type="range" min="0" max="100" <b>ng-model="val"</b>>
+<b>{{val}}</b>/100
+&lt;/div>
       </pre>
     </div>
     <div ng-app ng-cloak ng-init="val=25" class="centered toppadding">
@@ -605,22 +606,22 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   </hgroup>
   <article>
     <pre class="prettyprint" data-lang="html/js">
-      &lt;style>
-      input::after {
-      <b>content: attr(data-value) '/' attr(max);</b>
-      position: relative;
-      left: 135px; top: -20px;
-    }
-    &lt;/style>
-    &lt;input type="range" min="0" max="100" value="25"&gt;
-    &lt;script>
-    var input = document.querySelector('input');
-    input.dataset.value = input.value; // Set an initial value.
+&lt;style>
+  input::after {
+  <b>content: attr(data-value) '/' attr(max);</b>
+  position: relative;
+  left: 135px; top: -20px;
+}
+&lt;/style>
+&lt;input type="range" min="0" max="100" value="25"&gt;
+&lt;script>
+  var input = document.querySelector('input');
+  input.dataset.value = input.value; // Set an initial value.
 
-    <b>input.addEventListener('change', function(e) {
-      this.dataset.value = this.value;
-    });</b>
-    &lt;/script>
+  <b>input.addEventListener('change', function(e) {
+  this.dataset.value = this.value;
+  });</b>
+&lt;/script>
   </pre>
   <div class="centered">
     Volume: <input type="range" min="0" max="100" value="25">
@@ -638,14 +639,14 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   </hgroup>
   <article>
     <pre class="prettyprint" data-lang="html">
-      Browsers: &lt;input <b>list="browsers"></b>
-      &lt;<b>datalist</b> id="browsers">
-      &lt;option value="Chrome">
-      &lt;option value="Firefox">
-      &lt;option value="Internet Explorer">
-      &lt;option value="Opera">
-      &lt;option value="Safari">
-      <b>&lt;/datalist></b>
+Browsers: &lt;input <b>list="browsers"></b>
+  &lt;<b>datalist</b> id="browsers">
+  &lt;option value="Chrome">
+  &lt;option value="Firefox">
+  &lt;option value="Internet Explorer">
+  &lt;option value="Opera">
+  &lt;option value="Safari">
+<b>&lt;/datalist></b>
     </pre>
     <ul>
       <li>Specifies a list of pre-defined options for an &lt;input&gt; element.</li>
@@ -706,23 +707,23 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
               <h2>Web Workers</h2>
               <h4>index.html</h4>
               <pre class="prettyprint" data-lang="html/js">
-                function startWorker(settings) {
-                var myWorker = new Worker('scripts/worker.js');
-                myWorker.addEventListener("message", workerListener, false);
-                myWorker.postMessage(settings);
-              }          
+function startWorker(settings) {
+  var myWorker = new Worker('scripts/worker.js');
+  myWorker.addEventListener("message", workerListener, false);
+  myWorker.postMessage(settings);
+}          
             </pre>
             <h4>Worker.js</h4>
             <pre class="prettyprint" data-lang="js">
-              self.addEventListener('message', function(e) {
-              doSomeWork();
-            };
-            function doSomeWork() {
-            importScripts('http://url?callBack=handleWork');
-          }
-          function handleWork() {
-          postMessage(result);
-        }
+self.addEventListener('message', function(e) {
+  doSomeWork();
+};
+function doSomeWork() {
+  importScripts('http://url?callBack=handleWork');
+}
+function handleWork() {
+  postMessage(result);
+}
       </pre>
     </article>
   </slide>
@@ -730,7 +731,7 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   <slide>
     <h3>Web Worker - Debug</h3>
     <article id="webworker-box"> <!-- class="flexbox vcenter"-->
-      
+
       <div>
         <img src="images/debug-webworkers-on-chrome.png" alt="debug worker in chrome devtool"/>
       </div>
@@ -768,12 +769,12 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
     <article>
       <p>Opening a filesystem:</p>
       <pre class="prettyprint" data-lang="js">
-        window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(
-        TEMPORARY,        // persistent vs. temporary storage
-        1024 * 1024,      // size (bytes) of needed space
-        initFs,           // success callback
-        opt_errorHandler  // opt. error callback, denial of access
-        );
+window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(
+  TEMPORARY,        // persistent vs. temporary storage
+  1024 * 1024,      // size (bytes) of needed space
+  initFs,           // success callback
+  opt_errorHandler  // opt. error callback, denial of access
+);
       </pre>
       <ul class="build">
         <li>Security: sandboxed per origin</li>
@@ -789,10 +790,10 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
     </hgroup>
     <article class="">
       <pre class="prettyprint" data-lang="js">
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/path/to/image.png', true);
-        <b>xhr.responseType = 'arraybuffer';</b>
-        xhr.onload = function(e) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/path/to/image.png', true);
+  <b>xhr.responseType = 'arraybuffer';</b>
+  xhr.onload = function(e) {
 
 
 
@@ -800,13 +801,8 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
 
 
 
-
-
-
-
-      };
-
-      xhr.send();
+  };
+  xhr.send();
     </pre>
   </article>
 </slide>
@@ -817,15 +813,15 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   </hgroup>
   <article class="">
     <pre class="prettyprint" data-lang="js">
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', '/path/to/image.png', true);
-      xhr.responseType = 'arraybuffer';
-      xhr.onload = function(e) {
-      <b>window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(TEMPORARY, 1024 * 1024, function(fs) {</b>
-      <b>}, onError);</b>
-    };
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'arraybuffer';
+xhr.onload = function(e) {
+  <b>window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(TEMPORARY, 1024 * 1024, function(fs) {</b>
+  <b>}, onError);</b>
+};
 
-    xhr.send();
+xhr.send();
   </pre>
 </article>
 </slide>
@@ -836,24 +832,26 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   </hgroup>
   <article class="">
     <pre class="prettyprint" data-lang="js">
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', '/path/to/image.png', true);
-      xhr.responseType = 'arraybuffer';
-      xhr.onload = function(e) {
-      window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js></a>(TEMPORARY, 1024 * 1024, function(fs) {
-      <b>fs.root.getFile('image.png', {create: true}, function(fileEntry) {</b>
-
-      
-
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'arraybuffer';
+xhr.onload = function(e) {
+  window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js></a>(TEMPORARY, 1024 * 1024, function(fs) {
+    <b>fs.root.getFile('image.png', {create: true}, 
+      function(fileEntry) {</b>
 
 
 
 
-      <b>}, onError);</b>
-    }, onError);
-  };
 
-  xhr.send();
+
+
+    <b>
+      }, onError);</b>
+  }, onError);
+};
+
+xhr.send();
 </pre>
 </article>
 </slide>
@@ -864,19 +862,20 @@ template authors: Eric Bidelman <ebidel@gmail.com> & Luke Mahé <lukem@google.co
   </hgroup>
   <article class="">
     <pre class="prettyprint" data-lang="js">
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', '/path/to/image.png', true);
-      xhr.responseType = 'arraybuffer';
-      xhr.onload = function(e) {
-      window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js></a>(TEMPORARY, 1024 * 1024, function(fs) {
-      fs.root.getFile('image.png', {create: true}, function(fileEntry) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'arraybuffer';
+xhr.onload = function(e) {
+  window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js></a>(TEMPORARY, 1024 * 1024, function(fs) {
+    fs.root.getFile('image.png', {create: true}, 
+      function(fileEntry) {
 
-      <b>fileEntry.createWriter(function(writer) {</b>
-      writer.onwriteend = function(e) { ... };
-      writer.onerror = function(e) { ... };
-      <b>writer.write(new Blob([xhr.response], {type: 'image/png'}));</b>
-      <b>}, onError);</b>
-
+        <b>fileEntry.createWriter(function(writer) {</b>
+        writer.onwriteend = function(e) { ... };
+        writer.onerror = function(e) { ... };
+        <b>writer.write(new Blob([xhr.response], {type: 'image/png'}));</b>
+        <b>
+      }, onError);</b>
     }, onError);
   }, onError);
 };
@@ -895,17 +894,18 @@ xhr.send();
       <li>Stored files/folders get their own ( <code>filesystem:</code> ) URL:</li>
     </ul>
     <pre class="centered" style="font-size:25px;">
-      <b>filesystem:</b><b alt="Origin of the app" class="blue" data-tooltip="Origin of the app"><span class="property" style="color:inherit;">http://example.com</span></b>/<b alt="Type of storage used" class="red" data-tooltip="Type of storage used"><span class="property" style="color:inherit;">temporary</span></b>/<b alt="Path to the file/folder" class="green" data-tooltip="Path to the file/folder"><span class="property" style="color:inherit;">image.png</span></b>
+<b>filesystem:</b><b alt="Origin of the app" class="blue" data-tooltip="Origin of the app"><span class="property" style="color:inherit;">http://example.com</span></b>/<b alt="Type of storage used" class="red" data-tooltip="Type of storage used"><span class="property" style="color:inherit;">temporary</span></b>/<b alt="Path to the file/folder" class="green" data-tooltip="Path to the file/folder"><span class="property" style="color:inherit;">image.png</span></b>
     </pre>
     <ul><li>Use for a src/href value:</li></ul>
     <pre class="prettyprint" data-lang="js">
-      var img = document.createElement('img');
-      img.src = <b>fileEntry.toURL();</b>
-      document.body.appendChild(img);
+var img = document.createElement('img');
+img.src = <b>fileEntry.toURL();</b>
+document.body.appendChild(img);
     </pre>
     <ul><li>Get back to a <code>FileEntry</code> from its <code>filesystem:</code> URL:</li></ul>
     <pre class="prettyprint" data-lang="js">
-      window.<a data-tooltip-property="resolveLocalFileSystemURL" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(img.src, function(fileEntry) { ... });
+window.<a data-tooltip-property="resolveLocalFileSystemURL" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(img.src, 
+  function(fileEntry) { ... });
     </pre>
   </article>
 </slide>
@@ -916,21 +916,20 @@ xhr.send();
   </hgroup>
   <article class="">
     <pre class="prettyprint" data-lang="js">
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', '/path/to/image.png', true);
-      xhr.responseType = 'arraybuffer';
-      xhr.onload = function(e) {
-      window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js></a>(TEMPORARY, 1024 * 1024, function(fs) {
-      fs.root.getFile('image.png', {create: true}, function(fileEntry) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'arraybuffer';
+xhr.onload = function(e) {
+  window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js></a>(TEMPORARY, 1024 * 1024, function(fs) {
+    fs.root.getFile('image.png', {create: true}, function(fileEntry) {
 
       fileEntry.createWriter(function(writer) {
-      writer.onwriteend = function(e) { ... };
-      writer.onerror = function(e) { ... };
-      writer.write(new Blob([xhr.response], {type: 'image/png'}));
+        writer.onwriteend = function(e) { ... };
+        writer.onerror = function(e) { ... };
+        writer.write(new Blob([xhr.response], {type: 'image/png'}));
+      }, onError);
     }, onError);
-
   }, onError);
-}, onError);
 };
 
 xhr.send();
@@ -945,20 +944,22 @@ xhr.send();
   <article>
     <p>Wrapper lib that implements common UNIX cmds (ls, cp, mv)</p>
     <pre class="prettyprint" data-lang="js">
-      <b>var filer = new Filer();</b>
+<b>var filer = new Filer();</b>
 
-      filer.<b>init</b>({persistent: false, size: 1024 * 1024}, function(fs) {...}, onError);
+filer.<b>init</b>({persistent: false, size: 1024 * 1024}, function(fs) {...}, onError);
 
-      filer.<b>ls</b>('path/to/some/dir/', function(entries) { ... }, onError);
+filer.<b>ls</b>('path/to/some/dir/', function(entries) { ... }, onError);
 
-      <b>filer.cp('file.txt', '/path/to/folder', 'newname.txt', function(entry) {
-        // entry.fullPath == '/path/to/folder/newname.txt'
-      }, onError);</b>
+<b>filer.cp('file.txt', '/path/to/folder', 'newname.txt', 
+function(entry) {
+  // entry.fullPath == '/path/to/folder/newname.txt'
+}, onError);</b>
 
-      var b = new Blob(['body { color: red; }'], {type: 'text/css'});
-      filer.<b>write</b>('styles.css', {data: b, type: b.type}, function(entry, writer) {
-      ...
-    }, onError);
+var b = new Blob(['body { color: red; }'], {type: 'text/css'});
+filer.<b>write</b>('styles.css', {data: b, type: b.type}, 
+function(entry, writer) {
+...
+}, onError);
   </pre>
 </article>
 </slide>
@@ -1014,14 +1015,15 @@ xhr.send();
   <article class="build">
     <p><label class="old"></label>Force downloads with a server:</p>
     <pre class="prettyprint" data-lang="http">
-      Content-Disposition: attachment; filename="MyLogo.png";
+Content-Disposition: attachment; filename="MyLogo.png";
     </pre>
     <ul class="toppadding">
       <li>Need a way for users to download data created in the app.</li>
     </ul>
     <p><label class="new"></label>Use <code>download</code> to download resources rather than navigate to them:</p>
     <pre class="prettyprint" data-lang="html">
-      &lt;a href="http://google.com/logo.png" <b>download="Logo.png"</b>>download me&lt;/a>
+&lt;a href="http://google.com/logo.png"
+  <b>download="Logo.png"</b>>download me&lt;/a>
     </pre>
   </article>
 </slide>
@@ -1041,16 +1043,19 @@ xhr.send();
   </hgroup>
   <article>
     <pre class="prettyprint" data-lang="js">
-      function downloadLink(name, content, mimetype) {
-      var a = document.createElement('a');
-      <b>a.href = window.<a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(new Blob([content], {type: mimetype}));</b>
-      <b>a.download = name;</b>
-      a.textContent = 'Download ready';
+function downloadLink(name, content, mimetype) {
+  var a = document.createElement('a');
+  <b>a.href = window.<a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(
+    new Blob([content], {type: mimetype}));</b>
+  <b>a.download = name;</b>
+  a.textContent = 'Download ready';
 
-      document.body.appendChild(a);
-    }
+  document.body.appendChild(a);
+}
 
-    downloadLink('MyNovel.txt', document.querySelector('textarea').textContent, 'text/plain');
+downloadLink('MyNovel.txt', 
+            document.querySelector('textarea').textContent, 
+            'text/plain');
   </pre>
 </article>
 </slide>
@@ -1083,14 +1088,14 @@ xhr.send();
       <div>
         <p>1. Basic strings</p>
         <pre class="prettyprint" data-lang="js">
-          worker.postMessage(<b>'Hello World'</b>);
-          window.postMessage(<b>JSON.stringify({msg: 'Hello World'})</b>, '*');
+worker.postMessage(<b>'Hello World'</b>);
+window.postMessage(<b>JSON.stringify({msg: 'Hello World'})</b>, '*');
         </pre>
       </div>
       <div>
         <p>2. JSON</p>
         <pre class="prettyprint" data-lang="js">
-          worker.postMessage(<b>{msg: 'Look ma, no strings!'}</b>);
+worker.postMessage(<b>{msg: 'Look ma, no strings!'}</b>);
         </pre>
       </div>
     </div>
@@ -1111,14 +1116,14 @@ xhr.send();
   <article>
     <p>3. Complex types (<code>File</code>, <code>Blob</code>, <code>ArrayBuffer</code>) via structured cloning</p>
     <pre class="prettyprint" data-lang="js">
-      var data = [1, 2, 3, 4];
+var data = [1, 2, 3, 4];
 
-      // Blob() in Chrome 20, FF 13
-      worker.postMessage(<b>new Blob(data.toString(), {type: 'text/plain'})</b>);
+// Blob() in Chrome 20, FF 13
+worker.postMessage(<b>new Blob(data.toString(), {type: 'text/plain'})</b>);
 
-      var uint8Array = new Uint8Array(data);
-      worker.postMessage(<b>uint8Array</b>);
-      worker.postMessage(<b>uint8Array.buffer</b>);
+var uint8Array = new Uint8Array(data);
+worker.postMessage(<b>uint8Array</b>);
+worker.postMessage(<b>uint8Array.buffer</b>);
     </pre>
     <ul class="build">
       <li>Problem: all of these methods are copies. Not efficient!</li>
@@ -1203,14 +1208,14 @@ xhr.send();
       <li>If transferred, buffer's <code>.byteLength</code> goes to zero.</li>
     </ul>
     <pre class="prettyprint" data-lang="js">
-      var ab = new ArrayBuffer(1);
-      worker.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(ab, [ab]);
-      if (ab.byteLength) {
-      alert('Transferables are not supported in your browser!');
-    } else {
-    // Transferables are supported.
-    // PITA = pain in the...
-  }
+var ab = new ArrayBuffer(1);
+worker.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(ab, [ab]);
+if (ab.byteLength) {
+  alert('Transferables are not supported in your browser!');
+} else {
+  // Transferables are supported.
+  // PITA = pain in the...
+}
 </pre>
 </article>
 </slide>
@@ -1288,10 +1293,11 @@ xhr.send();
   <article>
     <p>Plugin-free acess to camera/microphone.</p>
     <pre class="prettyprint" data-lang="js">
-      <b>navigator.<a data-tooltip-property="getUserMedia" data-tooltip-support='["unprefixed", "webkit", "moz"]' data-tooltip-js></a></b>({audio: true, video: true}, function(stream) {
-      var video = document.querySelector('video');
-      video.src = <b>window.<a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(stream)</b>;
-    }, function(e) {
+<b>navigator.<a data-tooltip-property="getUserMedia" data-tooltip-support='["unprefixed", "webkit", "moz"]' data-tooltip-js></a></b>({audio: true, video: true}, 
+  function(stream) {
+    var video = document.querySelector('video');
+    video.src = <b>window.<a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(stream)</b>;
+  }, function(e) {
     console.log(e);
   });
 </pre>
@@ -1415,17 +1421,17 @@ xhr.send();
   <article>
     <p>Use an <code>HTMLMediaElement</code> as the source to the API:</p>
     <pre class="prettyprint" data-lang="js">
-      var ctx = new window.<b><a data-tooltip-property="AudioContext" data-tooltip-lowercase data-tooltip-support='["webkit"]' data-tooltip-js></a></b>();
-      var audioElement = new Audio();
-      audioElement.src = 'sounds/dope_beats.mp3';
-      audioElement.controls = true;
-      audioElement.autoplay = true;
+var ctx = new window.<b><a data-tooltip-property="AudioContext" data-tooltip-lowercase data-tooltip-support='["webkit"]' data-tooltip-js></a></b>();
+var audioElement = new Audio();
+audioElement.src = 'sounds/dope_beats.mp3';
+audioElement.controls = true;
+audioElement.autoplay = true;
 
-      <b>var source = ctx.createMediaElementSource(audioElement);</b>
-      var analyser = ctx.createAnalyser();
+<b>var source = ctx.createMediaElementSource(audioElement);</b>
+var analyser = ctx.createAnalyser();
 
-      source.connect(analyser);
-      analyser.connect(ctx.destination);
+source.connect(analyser);
+analyser.connect(ctx.destination);
     </pre>
     <p><b>Note</b>: There's no <code>source.noteOn(0)</code>. Play/pause is controlled by the <code>&lt;audio&gt;</code> element.</p>
   </article>
@@ -1456,16 +1462,16 @@ xhr.send();
     </ul>
     <div class="build">
       <pre class="prettyprint" data-lang="js">
-        var socket = new WebSocket('ws://example.com/sock', ['dumby-protocol']);
-        <b>socket.binaryType = 'blob';</b> // or 'arraybuffer'
-        socket.onopen = function(e) {
-        window.setInterval(function() {
-        if (<b>socket.bufferedAmount</b> == 0) {
-        <b>socket.send(new Blob([blob1, blob2]));</b>
-      }
-    }, 50); // rate limit us.
-  };
-  socket.onmessage = function(e) {
+var socket = new WebSocket('ws://example.com/sock', ['dumby-protocol']);
+<b>socket.binaryType = 'blob';</b> // or 'arraybuffer'
+socket.onopen = function(e) {
+  window.setInterval(function() {
+    if (<b>socket.bufferedAmount</b> == 0) {
+      <b>socket.send(new Blob([blob1, blob2]));</b>
+    }
+  }, 50); // rate limit us.
+};
+socket.onmessage = function(e) {
   document.querySelector('img').src = <b><a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(e.data);</b>
 };
 </pre>
@@ -1499,7 +1505,7 @@ xhr.send();
       &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     </pre>
 
-    
+
     <p>Header: </p>
     <pre class="prettyprint">
       X-UA-Compatible: IE=Edge,chrome=1
@@ -1511,14 +1517,13 @@ xhr.send();
 <!--### Final words of wisdom -->
 <slide class="segue">
   <article class="flexbox vcenter auto-fadein">
-    <h2 class="black">Zehu Finito</h2>
-    
+    <h2 class="black">The Finito</h2>
   </article>
 </slide>
 
 <slide id="wrapup">
   <hgroup>
-    <h2>The Web Can Do Amazing Things...</h2>
+    <h2>HTML5 Power Tools/APIs</h2>
   </hgroup>
   <article>
     <ul></ul> <!-- dynamically filled -->
@@ -1528,12 +1533,14 @@ xhr.send();
 <slide class="nobackground">
   <article class="flexbox vcenter" id="chrome-heart">
     <div class="chrome-logo spin"></div>
+
     <h1 title="BFFs"><div class="jitter"></div> <img src="images/HTML5_Badge_128.png" style="margin-bottom:-24px;height:85px;"></h1>
     <p class="toppadding"><a href="https://plus.google.com/b/102860501900098846931/102860501900098846931">+Google Chrome Developers</a></p>
   </article>
 </slide>
 
 <slide class="thank-you-slide segue nobackground">
+  <h2>Questions?</h2>
   <aside class="gdbar right"><img src="images/chrome_logo.png"></aside>
   <article class="flexbox vleft auto-fadein">
     <h2>&lt; Thank You! &gt;</h2>
